@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #fcf;
+}
+
+h1 {
+    color: green;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.everything-wrapper {
+    width: 100%;
+}
+
+#todo-list-container {
+    width: 55%;
+    border: 2px solid black;
+    border-radius: 8px;
+    height: 90vh;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fcf;
+}
+
+#create-item-btn {
+    padding: 8px 15px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #4ADE80;
+    margin-bottom: 10px;
+}
+
+#list-of-todo {
+    width: 100%;
+    height: 77vh;
+    overflow-y: auto;
+}
+
+.list {
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+}
+
+.list h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 200;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid green;
+    padding-bottom: 5px;
+}
+
+.list h2 button {
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.list-btns {
+    margin: 0;
+    inset: auto;
+    position: absolute;
+    left: calc(100% - 33%);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+.edit-list {
+    background-color: #4ADE80;
+    color: black;
+    padding: 5px 15px;
+    width: 70px;
+    border: 1px solid green;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.delete-list {
+    background-color: red;
+    color: white;
+    padding: 5px 15px;
+    width: 70px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.list p {
+    margin-bottom: 5px;
+    font-family: sans-serif;
+}
+
+#form-container {
+    width: 55%;
+    border: 2px solid black;
+    border-radius: 8px;
+    height: 90vh;
+    margin: 20px auto;
+    padding: 20px;   
+    position: relative;
+}
+
+#close-form-btn {
+    display: block;
+    border: 1px solid grey;
+    padding: 5px 10px;
+    border-radius: 700;
+    font-weight: 600;
+    font-size: 18px;
+    color: grey;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+#close-form-dialog {
+    position: fixed; 
+    inset: 0;
+    margin: auto;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+#close-form-dialog h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: grey;
+    margin-bottom: 20px;
+}
+
+.close-form-dialog-btn-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+#cancel-dialog {
+    background-color: #4ADE80;
+    color: white;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: 1px solid green;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#discard-item {
+    background-color: red;
+    color: white;
+    font-weight: 600;
+    padding: 8px 18px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#form {
+    margin-top: 50px;
+}
+
+input[type="date"],
+input[type="time"] {
+    width: 80%;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 80%;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+input[type="date"] {
+    width: 80%;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+textarea {
+    width: 80%;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 30px;
+    height: 100px;
+    resize: none;
+    font-family: sans-serif;
+}
+
+#add-item-btn {
+    display: block;
+    padding: 8px 18px;
+    background-color: #4ADE80;
+    border: 1px solid green;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    #todo-list-container {
+        width: 90%;
+    }
+
+    #form-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 535px) {
+    .edit-list {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .close-form-dialog-btn-container {
+        width: 80%;
+    }
+
+    .list-btns {
+        width: 90px;
+    }
+
+    .edit-list {
+        width: fit-content;
+        padding: 5px 23px;
+        margin-bottom: 8px;
+    }
+
+    .delete-list {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 400px) {
+    input[type="text"],
+    input[type="date"],
+    input[type="time"],
+    textarea {
+        width: 100%;
+    }
+
+    #todo-list-container {
+        width: 95%;
+    }
+
+    #form-container {
+        width: 95%;
+    }
+    
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>What I need to do</h1>
+
+<div class="everything-wrapper">
+
+    <div id="todo-list-container">
+        <button type="button" id="create-item-btn">Create item</button>
+        <div id="list-of-todo">
+        </div>
+    </div>
+
+    <div id="form-container" class="hidden">
+        
+        <button type="button" id="close-form-btn">X</button>
+
+        <dialog id="close-form-dialog">
+            <h2>Your list will not be saved</h2>
+            <div class="close-form-dialog-btn-container">
+                <button type="button" id="cancel-dialog">Cancel</button>
+                <button type="button" id="discard-item">Discard</button>
+            </div>
+        </dialog>
+        
+        <form id="form">
+            <input id="title-input" type="text" placeholder="Title e.g Walk the dog" required />
+            
+            <input id="date-input" type="date" required />
+            
+            <input id="time-input" type="time" required />
+            
+            <textarea id="textarea-input" required></textarea>
+
+            <button type="submit" id="add-item-btn">Add Item</button>
+        </form>
+    
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
